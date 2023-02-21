@@ -1,17 +1,14 @@
-#include<stdio.h>
-#include<ctype.h>
-
-int main()
+#include "main.h"
+int main(void)
 {
-	int ctr=0;
-	char str[]=" The quick brown fox \n jumps over the \n lazy dog. \n";	
-	printf("\n Print only the string before new line character :\n");  
-    printf("----------------------------------------------------\n");	
-	while (isprint(str[ctr]))
+	char *sh = "mai";
+
+	while (*sh)
 	{
-		putchar (str[ctr]);
-		ctr++;
+		_putchar(*sh);
+		sh++;
 	}
-	printf("\n\n");
-	return 0;
+	_putchar('\n');
+
+	return (0);
 }
