@@ -1,19 +1,17 @@
-#include "holberton.h"
-/**
- * main - Entry point
- *
- * Return: Always 0 (Success)
- */
-int main(void)
+#include<stdio.h>
+#include<ctype.h>
+
+int main()
 {
-	char *sh = "Holberton";
-
-	while (*sh)
+	int ctr=0;
+	char str[]=" The quick brown fox \n jumps over the \n lazy dog. \n";	
+	printf("\n Print only the string before new line character :\n");  
+    printf("----------------------------------------------------\n");	
+	while (isprint(str[ctr]))
 	{
-		_putchar(*sh);
-		sh++;
+		putchar (str[ctr]);
+		ctr++;
 	}
-	_putchar('\n');
-
-	return (0);
+	printf("\n\n");
+	return 0;
 }
